@@ -10,7 +10,7 @@ class Iterator:
         if step == 0:
             raise StepValueError('Шаг не может быть равен 0')
         if(step > 0 and start >= stop) or (step < 0 and start <= stop):
-            raise StepValueError('неверные параметры для итерации')
+            print(StepValueError('неверные параметры для итерации'))
     def __iter__(self):
         self.pointer = self.start
         return self
@@ -27,7 +27,7 @@ except StepValueError:
 
 iter2 = Iterator(-5, 1)
 iter3 = Iterator(6, 15, 2)
-# iter4 = Iterator(5, 1, -1)
+iter4 = Iterator(5, 1,-1)
 iter5 = Iterator(10, 1)
 
 for i in iter2:
